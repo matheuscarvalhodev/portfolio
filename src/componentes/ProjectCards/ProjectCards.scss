@@ -1,0 +1,88 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+
+.cardProject{
+    border: 10px white double;
+    border-radius: 10px;
+    perspective: 1000px;
+    height: 250px;
+    width: 180px;
+    position: relative;
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(md){
+        height: 250px;
+        width: 220px;
+    }
+}
+.cardProject img{
+    width: 70%;
+}
+
+.cardProject .back{
+    position: absolute;
+    transform: rotate(0deg);
+    backface-visibility: hidden;
+    transition: transform 0.4s linear;
+}
+
+.cardProject .front{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: transform 0.4s linear;
+}
+
+.cardProject:hover .back{
+    transform: rotateY(-180deg);
+}
+
+.cardProject:hover .front{
+    transform: rotateY(0deg);
+}
+
+.containerProject .cardProject .front p{
+    font-size: 12.5px;
+    font-weight: bold !important;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    @include breakpoint(md){
+        font-size: 14px;
+    }
+}
+.containerProject .cardProject .back h2{
+    font-size: 12px;
+    font-weight: bold !important;
+    @include breakpoint(md){
+    font-size: 16px;
+    }
+}
+.linksProject{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.linksProjectNone{
+    display: none;
+}
+.link{
+    cursor: pointer;
+}
+
+.opacidade{
+    opacity: 0.3;
+}

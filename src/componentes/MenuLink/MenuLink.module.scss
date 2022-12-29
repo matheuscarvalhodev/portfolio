@@ -1,0 +1,37 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.principal{
+    display: flex;
+}
+
+.principal h2{
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    transition: font-size .25s linear;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font: bold;
+    margin-bottom:32px;
+    font-weight: 50;
+    @include breakpoint(md) {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        
+    }
+}
+
+.imagem{
+    display: none;
+    @include breakpoint(md) {
+        display: block;
+        width: 15px;
+        margin-right: 5px;
+    }  
+}

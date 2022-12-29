@@ -1,0 +1,26 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.section-content h1{
+    font-size: 24px !important;
+    @include breakpoint(md){
+        font-size: 32px !important;
+    }
+}
+.textoHabilidades{
+    margin-bottom: 30px;
+}
+.paragrafoHabilidades{
+    text-align: justify;
+    margin-bottom: 20px;
+    @include breakpoint(md){
+        margin-bottom: 10px;
+    }
+}
+
+

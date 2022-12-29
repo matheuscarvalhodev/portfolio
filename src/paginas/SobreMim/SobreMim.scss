@@ -1,0 +1,62 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.section-dark {
+    background: #000;
+    color: white;
+  }
+.section-content {
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+.section-content p{
+    margin-bottom: 10px;
+}
+.section-content h1{
+    font-size: 32px;
+}
+.primeiroParagrafo{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    @include breakpoint(md){
+        display: block;
+    }
+    
+}
+
+.primeiroParagrafo .foto{
+    width: 70%;
+    height: 90%;
+    border: 15px double white;
+    border-radius: 50%;
+    margin: auto;
+    @include breakpoint(md){
+        float: left;
+        shape-outside: circle(50%) !important;
+        width: 250px;
+        height: 250px;
+        margin-right: 30px;
+        border: 15px double white;
+
+    }  
+}
+
+.primeiroParagrafo p{
+    text-align: justify;
+}
+.segundoParagrafo{
+    margin-bottom: 15px;
+}
+
+.paragrafoSobreMim{
+    text-align: justify;
+}
+

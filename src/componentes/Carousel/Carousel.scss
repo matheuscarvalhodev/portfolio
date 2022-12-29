@@ -1,0 +1,45 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.principal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.principal h2{
+    font-size: 14px;
+}
+.cardCarousel{
+    width: 550px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 4px white double;
+    @include breakpoint(md){
+        height: 420px;
+    }
+}
+
+.carousel{
+    height: 100%;
+}
+
+.carousel .slide img{
+    width: 100%;
+    height: 300px;
+    @include breakpoint(md){
+        height: 420px;
+    }
+}
+
+.image-wrapper{
+    width: 100%;
+    margin-bottom: 10px;
+}

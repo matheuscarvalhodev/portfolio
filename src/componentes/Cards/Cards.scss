@@ -1,0 +1,56 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 555px;
+    border-radius: 10px;
+    border: 10px white double;
+    @include breakpoint(md){
+        width: 560px;
+        height: 410px;
+    }
+}
+
+.slideHabilidade p{
+    @include breakpoint(md){
+        font-size: 16px;
+        margin: 60px auto;
+        text-align: center;
+    }
+    font-size: 14px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.image-wrapper-card{
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.icon{
+    @include breakpoint(md){
+        margin-left: 50px;
+    }
+    margin-bottom: 30px;
+}
+.slideHabilidade{
+    @include breakpoint(md){
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 200px 300px;
+        grid-template-rows: 300px;
+        text-align: center;
+    }
+    
+}

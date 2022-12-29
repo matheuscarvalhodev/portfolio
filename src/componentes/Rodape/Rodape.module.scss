@@ -1,0 +1,38 @@
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+.principal {
+    @include breakpoint(md){
+        height: 50px;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+.imagem{
+    display: none;
+    @include breakpoint(md){
+        display: inline;
+        width: 15%;
+    }
+}
+.navegacao{
+    display: none;
+    @include breakpoint(md){
+        display: flex;
+        gap: 20px;
+    }
+
+}
