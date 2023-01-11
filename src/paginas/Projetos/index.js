@@ -6,7 +6,7 @@ import "./Projetos.scss";
 export default function Projetos({ dark, id }) {
   return (
     <div className={"section" + (dark ? " section-dark" : "")}>
-      <div className="section-content" id={id}>
+      <div className="projeto-content" id={id}>
         <h1>Projetos</h1>
         <div className="projetosGrid">
           {

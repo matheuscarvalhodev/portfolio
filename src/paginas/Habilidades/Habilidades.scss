@@ -6,7 +6,12 @@
         }
     }
 }
-.section-content h1{
+.section-content-habilidades{
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px;
+}
+.section-content-habilidades h1{
     font-size: 24px !important;
     @include breakpoint(md){
         font-size: 32px !important;
@@ -19,8 +24,7 @@
     text-align: justify;
     margin-bottom: 20px;
     @include breakpoint(md){
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 }
-
 

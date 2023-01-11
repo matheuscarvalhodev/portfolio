@@ -7,8 +7,8 @@ export default function Inicio({id }) {
     <section className="inicio-section">
       <div className="inicio-content" id={id}>
         <div className="texto">
-          <h1>Olá, sou Math</h1>
           <div>
+            <h1>Olá, sou Math</h1>
             <p>Desenvolvedor Backend, amante de Frontend e apaixonado por Ciencia de Dados</p>
             <a href="./curriculo.pdf" id="download" download><button className="butao-download">Download CV <BsDownload size={18}/></button></a>
           </div>

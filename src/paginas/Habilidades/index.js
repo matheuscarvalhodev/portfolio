@@ -13,7 +13,7 @@ export default function Habilidades({dark, id }) {
       }
     return (
       <div className={"section" + (dark ? " section-dark" : "")}>
-        <div className="section-content" id={id}>
+        <div className="section-content-habilidades" id={id}>
         <h1>Habilidades e Experiências</h1>
           <div className="areaHabilidade">
               <div className="textoHabilidades">

@@ -16,11 +16,9 @@
     position: relative;
     margin: 5px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     @include breakpoint(md){
-        height: 250px;
-        width: 220px;
+        height: 350px;
+        width: 270px;
     }
 }
 .cardProject img{
@@ -29,6 +27,10 @@
 
 .cardProject .back{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transform: rotate(0deg);
     backface-visibility: hidden;
     transition: transform 0.4s linear;
@@ -39,7 +41,10 @@
     height: 100%;
     background-color: white;
     color: black;
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: rotateY(180deg);
     backface-visibility: hidden;
     transition: transform 0.4s linear;
@@ -57,18 +62,15 @@
     font-size: 12.5px;
     font-weight: bold !important;
     padding: 5px;
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
     @include breakpoint(md){
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 .containerProject .cardProject .back h2{
     font-size: 12px;
     font-weight: bold !important;
     @include breakpoint(md){
-    font-size: 16px;
+    font-size: 18px;
     }
 }
 .linksProject{
